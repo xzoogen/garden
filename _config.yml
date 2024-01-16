@@ -1,0 +1,13 @@
+
+theme: jekyll-theme-modernist
+
+nav:
+- name: Home
+  link: /
+- name: About
+  link: /about
+
+title      : 瞎扯瞎说
+lang       : zh
+description: 个人博客 & 笔记
+copyright  : © 2018 - 2024 xzoogen All Rights Reserved
