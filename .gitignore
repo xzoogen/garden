@@ -33,6 +33,7 @@ venv/
 
 # Jekyll
 _site/
+vendor/
 
 # env
 env.sh
