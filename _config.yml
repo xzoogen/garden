@@ -1,8 +1,30 @@
 
+
+# github pages default
+lsi: false
+safe: true
+source: _post
+incremental: false
+highlighter: rouge
+gist:
+  noscript: false
+kramdown:
+  math_engine: mathjax
+  syntax_highlighter: rouge
+# end default
+
+
 # theme: jekyll-theme-modernist
 # remote_theme: pages-themes/time-machine@v0.2.0
 plugins:
-- jekyll-remote-theme # add this line to the plugins list if you already have one
+  # github 默认启用的插件 https://docs.github.com/zh/pages/setting-up-a-github-pages-site-with-jekyll/about-github-pages-and-jekyll#plugins
+  - jekyll-remote-theme # add this line to the plugins list if you already have one
+  # - jekyll-remote-theme
+  - jekyll-feed
+  # - jekyll-paginate
+  - jekyll-archives
+  - jekyll-sitemap
+
 
 nav:
 - name: Home
@@ -14,3 +36,28 @@ title      : 瞎扯瞎说
 lang       : zh
 description: 个人博客 & 笔记
 copyright  : © 2018 - 2024 xzoogen All Rights Reserved
+
+# Pages path
+defaults:
+  - scope:
+      path: '_pages'
+    values:
+      permalink: /:basename:output_ext
+
+feed:
+  excerpt_only: true
+  posts_limit: 10
+  posts_sort: last_modified_at
+
+
+
+giscus:
+  repo: "xzoogen/garden"
+  category: "Announcements"
+  repo_id: "R_kgDOLFfgJw"
+  category_id: "DIC_kwDOLFfgJ84CcdSp"
+  mapping: 'pathname'
+  input_position: 'top'
+  theme: 'light'
+  lang: "zh"
+
