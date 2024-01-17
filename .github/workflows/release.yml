@@ -1,0 +1,30 @@
+name: Release
+
+on:
+    push:
+        branches: ["main"] 
+
+env:
+    PLUGIN_NAME: obsidian-spaced-repetition-recall
+
+permissions: write-all
+
+jobs:
+    release:
+        runs-on: ubuntu-latest
+
+        steps:
+            - uses: actions/checkout@v3
+
+            - name: Use Python
+              uses: actions/setup-python@v3
+              with:
+                  python-version: "3.11"
+
+            - name: Install dependencies
+              run: pip install -r requirements.txt
+
+            - name: Deploy the documentation
+              run: mkdocs gh-deploy --force --clean --verbose
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

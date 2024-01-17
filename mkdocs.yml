@@ -1,0 +1,61 @@
+site_name: 瞎扯瞎说
+site_url: https://xzoogen.github.io/garden/
+site_author: xzoogen
+site_description: >-
+    个人博客&笔记
+
+repo_name: xzoogen/garden
+repo_url: https://github.com/xzoogen/garden
+edit_uri: ""
+
+theme:
+    name: material
+    # logo: assets/icon.ico
+    # favicon: assets/icon.ico
+    icon:
+        repo: fontawesome/brands/github
+    palette:
+        - scheme: default
+          toggle:
+              icon: material/brightness-7
+              name: Switch to dark mode
+        - scheme: slate
+          toggle:
+              icon: material/brightness-4
+              name: Switch to light mode
+    features:
+        - navigation.top
+        - toc.follow
+
+nav:
+    - Index: index.md
+    - Changelog: changelog.md
+    - License: license.md
+
+plugins:
+    - search
+    - i18n:
+          docs_structure: folder
+          languages:
+              cn: 中文
+            #   en: English
+          default_language: cn
+
+markdown_extensions:
+    - toc:
+          permalink: true
+    - pymdownx.highlight:
+          anchor_linenums: true
+    - pymdownx.inlinehilite
+    - pymdownx.snippets
+    - admonition
+    - pymdownx.details
+    - pymdownx.superfences
+    - attr_list
+    - footnotes
+    - pymdownx.emoji:
+          emoji_index: !!python/name:materialx.emoji.twemoji
+          emoji_generator: !!python/name:materialx.emoji.to_svg
+
+remote_branch: gh-pages
+remote_name: origin
